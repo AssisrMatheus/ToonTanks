@@ -21,3 +21,15 @@ APawnBase::APawnBase()
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Projectile Spawn"));
 	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
 }
+
+void APawnBase::RotateTurret(FVector LookAtTarget)
+{
+}
+
+void APawnBase::Fire()
+{
+}
+
+void APawnBase::HandleDestruction()
+{
+}
