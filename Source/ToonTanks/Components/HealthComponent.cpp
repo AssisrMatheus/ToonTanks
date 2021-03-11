@@ -27,6 +27,8 @@ void UHealthComponent::TakeDamage(AActor *DamagedActor, float Damage, const UDam
 {
 	if (Health > 0 && Damage != 0)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("%s is taking %s of damage"), *DamagedActor->GetName(), *FString::SanitizeFloat(Damage));
+
 		Health = FMath::Clamp(Health - Damage, 0.f, DefaultHealth);
 
 		if (Health <= 0)
